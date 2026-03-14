@@ -1,6 +1,6 @@
 # Hey, I'm Sukriti Sehgal 👋
 
-**MS Data Science @ CU Boulder** · **Founder, Oriva Health** · **Building at the intersection of AI, healthcare, and applied ML**
+**MS Data Science @ CU Boulder** · **Building at the intersection of AI, healthcare, and applied ML**
 
 I'm a data scientist and engineer who loves turning messy real-world problems into working systems — whether that's a Bayesian diagnostic engine for dental triage, a computer vision pipeline for retail shelves, or a multi-agent LangChain workflow that actually ships.
 
