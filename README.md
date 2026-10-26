@@ -1,211 +1,147 @@
 # Hey, I'm Sukriti Sehgal 👋
 
-### Applied AI / ML Engineer · AI Product Builder · Co-Founder @ Oriva Health
+### Founder & CEO @ Oriva Health · AI Engineer
 
-**MS Data Science @ University of Colorado Boulder**
+**I build clinical AI, from the decision engine and LLM pipeline to the clinic workflow it runs in.**
 
-I build **end-to-end AI systems** across healthcare, agentic workflows, computer vision, and data products — from modeling and experimentation to backend infrastructure and user-facing products.
+🟢 **Looking for opportunities:** AI engineering, applied AI, ML engineering and AI product roles, in any location. [Let's talk →](mailto:sukritisehgal2800@gmail.com)
 
-I especially enjoy taking ambiguous real-world problems and turning them into systems that actually work.
-
-🏆 **CalHacks Winner** · **Healthcare AI Hackathon — 2nd Place + People's Choice** · **NSF I-Corps Fellow**  
-📍 **San Francisco Bay Area**  
-🎯 **Open to Applied AI, ML Engineering, AI Product, Data Science, and technical product roles**
-
----
-
-## 🚀 Featured Projects
-
-### 🏥 Project Uzima — Agentic Healthcare AI
-
-My most recent AI build, developed at a healthcare AI hackathon supported by **AWS and OpenAI** at AWS Builder Loft in San Francisco.
-
-Project Uzima was built as an **agentic healthcare system**, bringing together specialized AI workflows, cloud infrastructure, clinical context, and intelligent orchestration rather than relying on a single chatbot or model.
-
-The goal was to coordinate multiple pieces of healthcare intelligence and surface the right information and actions at the right stage of a workflow.
-
-🏆 **2nd Place Overall**  
-🏆 **People's Choice Award**
-
-`AWS` `OpenAI` `Healthcare AI` `AI Agents` `LLMs` `Cloud Infrastructure`
-
----
-
-### 🧬 ATLAS-MD — Agentic Clinical Research Intelligence
-
-An AI-powered clinical research workspace designed to help clinicians navigate medical evidence without jumping between disconnected papers and searches.
-
-ATLAS-MD converts clinical questions into interactive **knowledge graphs** and combines:
-
-- AI-extracted clinical insights
-- Evidence scoring
-- Contradiction detection across research
-- Context-aware research agents
-- Interactive D3.js evidence graphs
-
-The agent maintains the user's research context, suggests follow-up questions, and helps explore connected evidence as an investigation develops.
-
-`React` `Express` `SQLite` `D3.js` `Gemini` `Semantic Scholar` `AI Agents`
-
----
-
-### 🎤 InterViewAR — CalHacks 12.0 Winner
-
-An immersive WebXR interview platform combining **real-time speech recognition, AI agents, structured evaluation, and live coaching feedback**.
-
-Used Groq Whisper for speech-to-text and Fetch.ai agents for intelligent interview orchestration.
-
-🏆 **Winner — Fetch.ai Track, CalHacks 12.0**
-
-`WebXR` `FastAPI` `Groq Whisper` `Fetch.ai` `AI Agents`
-
----
-
-### 🛒 OmniShelf AI — Retail Computer Vision
-
-Built an end-to-end computer vision system for **retail shelf monitoring, SKU localization, planogram comparison, and out-of-stock detection**.
-
-Developed a multi-stage pipeline combining SKU-110K localization, a fine-tuned YOLOv11 model, and automated vision verification.
-
-**95.51% mAP@50 · 84.89% Precision · 88.52% Recall**
-
-`YOLOv11` `Computer Vision` `FastAPI` `React/TypeScript` `Python`
-
----
-
-### 🏥 Secure Medical AI — Clinical Documentation Platform
-
-Built a full-stack healthcare platform with:
-
-- Retrieval-augmented clinical summarization
-- Semantic search across medical notes
-- Role-based access and workflows
-- PostgreSQL-backed patient data
-- GCP-based cloud deployment
-
-`React` `TypeScript` `FastAPI` `LangChain` `FAISS` `GCP` `PostgreSQL`
+🏆 **Healthcare AI Hackathon: 2nd Place + People's Choice** · **CalHacks 12.0 Winner (Fetch.ai Track)** · **NSF I-Corps Fellow**  
+🎓 **MS Data Science, University of Colorado Boulder (2026)**  
+📍 **San Francisco Bay Area** · 🌐 **[sukritisehgal.me](https://sukritisehgal.me)**
 
 ---
 
 ## 🦷 Building Oriva Health
 
-I'm the **Co-Founder of Oriva Health**, where we've been building AI infrastructure for healthcare operations, starting with dental practices.
+**Founder & CEO** (Oct 2026 – now). Before that, **Founder & AI Engineer** (Apr – Sep 2026), while Oriva was a CU Boulder venture backed by Catalyze CU and NSF I-Corps.
 
-Our work combines **clinical intelligence, voice AI, patient intake, urgency detection, scheduling, and operational workflows**.
+Oriva is a clinical AI platform for dental practices, working with **2 design-partner clinics**. Veronica, the voice agent built by our CTO, has taken real patient calls since September 2026 and books visits through the scheduler I built.
 
-Highlights:
+- Built the **clinical engine** (Python, FastAPI, Cloud Run) from AAE guidelines and the research literature, refined with CU Anschutz faculty. It returns a confidence level and an urgency band for every case.
+- **Kept the LLM out of clinical decisions:** Claude Haiku 4.5 only turns what patients say into structured answers, and a safety layer checks for red flags on every turn.
+- Built a **voicemail triage service** (Twilio, Deepgram Nova-3, Claude Haiku 4.5 with schema-constrained JSON) that sorts messages by intent and flags emergencies.
+- Created the **Smart Questionnaire** (Next.js, React) and a **booking service** (FastAPI, PostgreSQL, Cloud Tasks).
+- Wrote an **evaluation harness** over a **459-case labelled set**, tracking top-1 and top-3 accuracy, urgency accuracy and calibration.
+- Ran **60+ NSF I-Corps interviews** and signed **7 letters of intent**.
+- **$25K equity-free** from Catalyze CU · Boulder Startup Week finalist · TiE Women Silicon Valley semifinalist · Chicago Venture Summit 2026 Future of Health portfolio
 
-- Built a clinical triage engine with input from dental professionals
-- Developed English/Spanish AI voice workflows
-- Conducted **60+ customer discovery interviews** through NSF I-Corps
-- Tested the clinical system across **1,300+ cases**
-- Selected for **NSF I-Corps Starting Blocks & R2M**
-- Received **$25K through Catalyze CU**
-- Took the product from **idea → prototype → clinical validation → real-world testing**
+`Clinical AI` `Claude` `FastAPI` `Next.js` `Twilio` `Deepgram` `PostgreSQL` `Cloud Run`
 
-`Healthcare AI` `Voice AI` `AI Agents` `Applied ML` `Python` `GCP`
+---
+
+## 🚀 Featured Projects
+
+### 🏥 Project Uzima: Emergency Bed-Finding Voice Agents
+A multi-agent system that calls every capable hospital at once to find a bed for a critically ill patient. Each hospital gets its own voice agent (Twilio, GPT OSS on AWS Bedrock), and every answer is read back and confirmed before it counts. Six FastAPI microservices handle call coordination, voice, live event streaming and an encrypted **HL7 FHIR** patient handoff through a SMART Health Link, behind a React map dashboard, covered by 76 automated tests.
+
+🏆 **2nd Place + People's Choice, Healthcare AI Hackathon (AWS × OpenAI), San Francisco**
+
+[Code](https://github.com/sukritisehgal-28/project-uzima) · [Live site](https://project-uzima.vercel.app) · [Demo video](https://youtu.be/xUHAnPiojRM)
+
+`Python` `FastAPI` `React` `Twilio` `AWS Bedrock` `HL7 FHIR` `GCP Cloud Run`
+
+---
+
+### 🧬 ATLAS-MD: Agentic Clinical Research Workspace
+Turns a clinical question into an interactive **knowledge graph** of the research behind it. It scores the evidence, flags studies that disagree, and runs a research agent that reads alongside you and opens new search threads as patterns emerge.
+
+[Live site](https://atlasmd.live) · [Code](https://github.com/sukritisehgal-28/ATLAS-MD) · [Demo video](https://youtu.be/IdHC7GCf-JA)
+
+`React` `Express` `SQLite` `D3.js` `Gemini` `Semantic Scholar` `AI Agents`
+
+---
+
+### 🎤 InterViewAR: Real-Time VR Interview Coach
+A Meta Quest 3 interview coach. Seven Fetch.ai agents turn live mic audio into pace, filler-word and tension scores, push coaching cues to a WebXR HUD every 1.5 seconds, and batch speech by silence before Groq Whisper.
+
+🏆 **Winner, Fetch.ai Track, CalHacks 12.0**
+
+[Code](https://github.com/sukritisehgal-28/InterVIew-AR-Calhacks2025) · [Devpost](https://devpost.com/software/interviewar) · [Article on Fetch.ai's Medium](https://medium.com/fetch-ai/agentviewar-building-empathy-into-interviews-with-fetch-ai-agents-e2c6ebb0d8ad)
+
+`WebXR` `FastAPI` `Groq Whisper` `Fetch.ai` `AI Agents`
+
+---
+
+### 🛒 OmniShelf AI: Retail Computer Vision
+An end-to-end system for **retail shelf monitoring, SKU localization, planogram comparison and out-of-stock detection**. A multi-stage pipeline combines SKU-110K localization, a fine-tuned YOLOv11 model and automated vision verification.
+
+**95.51% mAP@50 · 84.89% Precision · 88.52% Recall**
+
+[Code](https://github.com/sukritisehgal-28/OmniShelf-AI-CV) · [Demo video](https://youtu.be/DcdsqbaZNQo)
+
+`YOLOv11` `Computer Vision` `FastAPI` `React/TypeScript` `Python`
+
+---
+
+### 🏥 Secure Medical AI: Clinical Documentation Platform
+A full-stack healthcare platform with retrieval-augmented clinical summaries, semantic search across medical notes, role-based access and PostgreSQL-backed patient data, deployed on GCP. Built with [Sakshi Asati](https://github.com/sakshiasati17).
+
+[Live demo](https://sukritisehgal-28.github.io/Secure-med-ai/) · [Code](https://github.com/sukritisehgal-28/Secure-med-ai) · [Demo video](https://youtu.be/iyclbDlEuXg)
+
+`React` `TypeScript` `FastAPI` `LangChain` `FAISS` `GCP` `PostgreSQL`
 
 ---
 
 ## 💼 Experience
 
-### 🤖 Data Science & AI Intern — GoodieBag Food Co.
+### 🤖 Data Science & AI Intern, GoodieBag Food Co. (Techstars-backed) · Jun 2025 – Apr 2026
+- Shipped the company's **first AI support chatbot** for 180K+ customers (RAG on PostgreSQL/pgvector, FastAPI, HubSpot). It resolves routine tickets on its own and flags likely fraud, **cutting manual triage by 70%**.
+- Developed a **multimodal agent** that turns product photos into ready-to-post marketing content, **raising content output by 55%**.
+- Set up the company-wide **Tableau analytics platform** (SQL pipelines, 20+ KPIs) for sales, partner onboarding and orders.
 
-- Built **LangChain multi-agent workflows** and AI-powered backend systems
-- Developed SQL-driven KPI reporting, Tableau dashboards, and a production chatbot integrated with **PostgreSQL + HubSpot CRM**
-- Worked across AI engineering, analytics, and product implementation
+### 📊 Data Analytics Intern, C5 Consultare / University of Denver · Sep 2025 – Mar 2026
+- Worked with a PhD researcher on **whether college pays off**: merged national debt and earnings data (100K+ records), modeled which programs leave graduates in financial distress, shipped a searchable dashboard and presented the findings to client executives in Power BI.
 
-`Python` `LangChain` `SQL` `PostgreSQL` `Tableau` `HubSpot`
+### 🎓 Course Assistant, University of Colorado Boulder · 2026
+- Taught **12 labs in Python, R and Excel to 120+ students**.
 
----
+### 🧠 Machine Learning Engineer Intern, Omdena · 2023 – 2024
+- Improved a **tuberculosis risk-prediction** pipeline in TensorFlow and shipped an end-to-end prototype (model and Streamlit app) with a global team.
 
-### 📊 Data Analytics Intern — C5 Consultare / University of Denver
+### 🔬 Machine Learning Intern, DRDO · 2022 – 2023
+- Built transformer summarization pipelines with Hugging Face and spaCy, reaching **0.85+ BERTScore**, and privacy-preserving NLP workflows. [Code](https://github.com/sukritisehgal-28/Summerizer-using-GPT)
 
-- Analyzed **100K+ records** of national education data
-- Built regression models, ROI analyses, and sensitivity studies
-- Translated statistical results into insights for strategic and policy-level decisions
-
-`Python` `R` `Regression` `Statistics` `Data Analytics`
-
----
-
-### 🧠 Machine Learning Engineer Intern — Omdena
-
-- Worked on collaborative applied ML projects with distributed engineering teams
-- Contributed to model development, experimentation, data pipelines, and ML implementation
-
-`Python` `Machine Learning` `Data Pipelines` `Applied AI`
-
----
-
-### 🔬 Machine Learning Research Intern — DRDO
-
-- Developed transformer-based NLP and text summarization workflows
-- Worked on privacy-aware machine learning and model evaluation
-- Achieved **0.85+ BERTScore** during summarization experiments
-
-`Transformers` `NLP` `Python` `Machine Learning` `Research`
-
----
-
-### 🌊 Research Intern — NITI Aayog
-
-- Worked on machine learning for **flood prediction in Assam, India**
-- Built a logistic regression-based predictive model using regional and environmental data
-- Achieved approximately **95% model accuracy** during the project
-
-`Python` `Logistic Regression` `Predictive Modeling` `Data Analysis`
-
----
-
-### 🎓 Course Assistant — University of Colorado Boulder
-
-Designed and supported hands-on learning in **Python, R, Excel, statistics, and applied data workflows**, helping students connect foundational methods with real-world analysis.
+### 🌊 Research Intern, NITI Aayog
+- Built a logistic regression model that predicts **floods in Assam** from monthly rainfall, with about **95% accuracy**. [Code](https://github.com/sukritisehgal-28/Flood-Prediction-Model_)
 
 ---
 
 ## 🧠 Technical Toolkit
 
-**AI / ML**
+**AI & LLMs**
 
-`Python` · `PyTorch` · `TensorFlow` · `scikit-learn` · `Hugging Face` · `LangChain` · `RAG` · `LLMs` · `AI Agents` · `Computer Vision`
+`Claude` · `Gemini` · `AWS Bedrock` · `Deepgram` · `RAG (pgvector, FAISS)` · `Tool calling` · `Structured outputs` · `Multi-agent systems` · `LLM evals`
 
-**Data**
+**Engineering & Data**
 
-`SQL` · `PostgreSQL` · `MongoDB` · `R` · `Tableau` · `Power BI` · `Statistical Modeling`
+`Python` · `SQL` · `FastAPI` · `PostgreSQL` · `Next.js` · `React` · `Docker` · `Google Cloud` · `pandas` · `R` · `scikit-learn` · `PyTorch` · `Tableau` · `Power BI`
 
-**Engineering**
+**Product & Healthcare**
 
-`FastAPI` · `React` · `TypeScript` · `JavaScript` · `Express` · `Docker` · `Git`
-
-**Cloud**
-
-`AWS` · `GCP` · `Azure`
+`Customer discovery` · `Workflow mapping` · `User testing` · `Clinical workflows` · `HL7 FHIR` · `HIPAA` · `Audit logging`
 
 ---
 
 ## 🏆 Highlights
 
-- 🏆 **2nd Place + People's Choice — Healthcare AI Hackathon**
-- 🏆 **CalHacks 12.0 Winner — Fetch.ai Track**
-- 🚀 **Co-Founder — Oriva Health**
-- 🔬 **NSF I-Corps Fellow**
-- 💰 **$25K Catalyze CU Award**
-- 🎓 **MS Data Science — University of Colorado Boulder**
-- 👩‍💻 **Former Chair — Data Science Student Association @ CU Boulder**
-- 🧪 **Machine Learning Research — DRDO**
-- 📄 **Published research through IEEE**
-- ⚡ Hackathon **builder, winner, advisor, and judge**
+- 🏆 **2nd Place + People's Choice, Healthcare AI Hackathon (AWS × OpenAI)**
+- 🏆 **Winner, Fetch.ai Track, CalHacks 12.0**
+- 🚀 **Founder & CEO, Oriva Health**
+- 💰 **$25K equity-free, Catalyze CU accelerator**
+- 🔬 **NSF I-Corps Fellow** (Starting Blocks and R2M)
+- 🌟 **Finalist, Boulder Startup Week** · **Semifinalist, TiE Women Silicon Valley** · **Chicago Venture Summit 2026, Future of Health portfolio**
+- 📄 **IEEE Access (2024):** co-author of a usability study of payment apps with 15 visually impaired participants
+- 🎓 **MS Data Science, University of Colorado Boulder** · Former Chair, Data Science Student Association
+- ⚡ Hackathon **builder, winner and judge**
 
 ---
 
 ## 🌱 A Little More About Me
 
-My path has taken me from **ML research and data science → building production AI systems → winning hackathons → working with clinicians → building a startup from zero**.
+My path has taken me from **ML research and data science → production AI systems → winning hackathons → working with clinicians → building a startup from zero**.
 
-That experience changed how I approach technology. I care about the model, but I care just as much about **what problem it solves, how the system is engineered, and whether someone actually wants to use it.**
-
-I'm especially interested in **Applied AI, AI Product, ML Engineering, healthcare technology, and agentic systems**.
+That changed how I approach technology. I care about the model, but just as much about **what problem it solves, how the system is engineered, and whether someone actually wants to use it.**
 
 ---
 
@@ -220,10 +156,11 @@ I'm especially interested in **Applied AI, AI Product, ML Engineering, healthcar
 
 ## 📬 Let's Connect
 
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/sukriti-sehgal-28)
-[![Portfolio](https://img.shields.io/badge/-Portfolio-000000?style=flat-square&logo=vercel&logoColor=white)](https://sukriti-sehgal-portfolio.vercel.app)
+[![Portfolio](https://img.shields.io/badge/-sukritisehgal.me-1C1D22?style=flat-square&logo=googlechrome&logoColor=white)](https://sukritisehgal.me)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sukriti-sehgal28/)
 [![Email](https://img.shields.io/badge/-Email-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:sukritisehgal2800@gmail.com)
+[![Book a call](https://img.shields.io/badge/-Book_a_call-4285F4?style=flat-square&logo=googlecalendar&logoColor=white)](https://calendar.app.google/jkD169VRaqfqENtb9)
 
 ---
 
-**Currently exploring Applied AI, ML Engineering, AI Product, Data Science, and technical product opportunities.**
+**🟢 Looking for opportunities in AI engineering, applied AI, ML engineering and AI product, in any location. If you're building something real, I'd love to talk.**
