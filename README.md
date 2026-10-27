@@ -37,7 +37,9 @@ A multi-agent system that calls every capable hospital at once to find a bed for
 
 🏆 **2nd Place + People's Choice, Healthcare AI Hackathon (AWS × OpenAI), San Francisco**
 
-[Code](https://github.com/sukritisehgal-28/project-uzima) · [Live site](https://project-uzima.vercel.app) · [Demo video](https://youtu.be/xUHAnPiojRM)
+[Live demo](https://uzima-health.vercel.app) · [Code](https://github.com/sukritisehgal-28/uzima-health) · [Demo video](https://youtu.be/xUHAnPiojRM)
+
+Built as a team with [Uditanshu Tomar](https://github.com/uditanshutomar) and [Sakshi Asati](https://github.com/sakshiasati17). The original hackathon repo is [project-uzima](https://github.com/sukritisehgal-28/project-uzima).
 
 `Python` `FastAPI` `React` `Twilio` `AWS Bedrock` `HL7 FHIR` `GCP Cloud Run`
 
